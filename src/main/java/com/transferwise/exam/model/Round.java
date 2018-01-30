@@ -16,16 +16,16 @@ public class Round {
 	private Player roundWinner;
 	private RockPaperScissorRules rules;
  
-    public Round(String gesture, HumanPlayer humanPlayer, ComputerPlayer computerPlayer) {
+        public Round(String gesture, HumanPlayer humanPlayer, ComputerPlayer computerPlayer) {
         
-    	this.humanPlayer = humanPlayer;
-    	this.computerPlayer = computerPlayer;
-    	humanPlayer.setGesture(gesture);
-    	computerPlayer.doGesture();
+    	        this.humanPlayer = humanPlayer;
+    	        this.computerPlayer = computerPlayer;
+    	        humanPlayer.setGesture(gesture);
+    	        computerPlayer.doGesture();
     	
-    	roundWinner= evaluate(humanPlayer, computerPlayer);
-    	setRoundWinner(roundWinner);
-    }
+    	        roundWinner= evaluate(humanPlayer, computerPlayer);
+    	        setRoundWinner(roundWinner);
+        }
 	
 	public HumanPlayer getHumanPlayer() {
 		return humanPlayer;
