@@ -12,10 +12,10 @@ import com.transferwise.exam.model.Tuple;
 @Component
 public class RockPaperScissorRules implements Rules{
 	
-	private static Map<Tuple<String>, String> rules;
-	{
-		RockPaperScissorRules.initializeRules();
-	}
+    private static Map<Tuple<String>, String> rules;
+    {
+	RockPaperScissorRules.initializeRules();
+    }
     
     private static void initializeRules() {
         rules = new HashMap<Tuple<String>, String>();
