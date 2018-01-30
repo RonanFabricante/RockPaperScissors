@@ -17,9 +17,6 @@ public class RoundDTO {
 	private Round round;
 	private GameStatus.Status status;
 	
-	@Value("${gameover.winning.score}")
-        private int gameOverWinningScore;
-	
         public RoundDTO(String gesture, HumanPlayer humanPlayer, ComputerPlayer computerPlayer) {
 		
 		this.round = new Round(gesture, humanPlayer, computerPlayer);
@@ -28,7 +25,7 @@ public class RoundDTO {
     
 	public void updateStatus(Round round) {
 	
-		if (round.getHumanPlayer().getScore() == gameOverWinningScore || round.getComputerPlayer().getScore() == gameOverWinningScore)
+		if (round.getHumanPlayer().getScore() == 3 || round.getComputerPlayer().getScore() == 3)
 			setStatus(Status.GAME_OVER);
 		else
 			setStatus(Status.IN_PROGRESS);
