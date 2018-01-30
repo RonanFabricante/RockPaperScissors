@@ -65,4 +65,4 @@ http://localhost:8080/rps/rounds
  
 You can start the program by downloading the rockpaperscissors.jar in your local environment and run it in the terminal
 following the command:
-java -jar ./rockpaperscissors-1.0.jar
+java -jar rockpaperscissors-1.0.jar
