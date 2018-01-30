@@ -18,9 +18,9 @@ public class RoundDTO {
 	private GameStatus.Status status;
 	
 	@Value("${gameover.winning.score}")
-    private int gameOverWinningScore;
+        private int gameOverWinningScore;
 	
-    public RoundDTO(String gesture, HumanPlayer humanPlayer, ComputerPlayer computerPlayer) {
+        public RoundDTO(String gesture, HumanPlayer humanPlayer, ComputerPlayer computerPlayer) {
 		
 		this.round = new Round(gesture, humanPlayer, computerPlayer);
 		updateStatus(round);
@@ -51,13 +51,13 @@ public class RoundDTO {
 	}
 	
 	@Override
-    public boolean equals(Object o) {
-        return EqualsBuilder.reflectionEquals(o, this);
-    }
+        public boolean equals(Object o) {
+                return EqualsBuilder.reflectionEquals(o, this);
+        }
 
-    public Map toMap() {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.convertValue(this, Map.class);
-    }
+        public Map toMap() {
+               ObjectMapper mapper = new ObjectMapper();
+               return mapper.convertValue(this, Map.class);
+        }
 
 }
