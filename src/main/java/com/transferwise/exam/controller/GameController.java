@@ -23,28 +23,28 @@ import com.transferwise.exam.service.GameService;
 @RestController
 public class GameController {
 	
-	@Value("${invalid.round.message}")
+    @Value("${invalid.round.message}")
     private String invalidRoundRequestMessage;
 	
-	@Value("${invalid.input.message}")
+    @Value("${invalid.input.message}")
     private String invalidInputExceptionMessage;
 	
-	@Value("${gameover.winning.score}")
+    @Value("${gameover.winning.score}")
     private int gameOverWinningScore;
 	
-	@Value("${gesture.rock}")
+    @Value("${gesture.rock}")
     private String rock;
 	
-	@Value("${gesture.paper}")
+    @Value("${gesture.paper}")
     private String paper;
 	
-	@Value("${gesture.scissors}")
+    @Value("${gesture.scissors}")
     private String scissors;
 	
-	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RPSGameAppBeanConfig.class);
-	public HumanPlayer humanPlayer = context.getBean("humanPlayer", HumanPlayer.class);
-	public ComputerPlayer computerPlayer = context.getBean("computerPlayer", ComputerPlayer.class);
-	public GameService gameService = context.getBean("gameService", GameService.class);
+    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(RPSGameAppBeanConfig.class);
+    public HumanPlayer humanPlayer = context.getBean("humanPlayer", HumanPlayer.class);
+    public ComputerPlayer computerPlayer = context.getBean("computerPlayer", ComputerPlayer.class);
+    public GameService gameService = context.getBean("gameService", GameService.class);
 	
 	
     @GetMapping(value="/rps/rounds")
