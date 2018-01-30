@@ -27,12 +27,6 @@ public class RPSGameAppIntegrationTest {
 	MockHumanPlayer humanPlayer = new MockHumanPlayer();
 	MockComputerPlayer computerPlayer = new MockComputerPlayer();
 	
-	@Test
-	public void forceOk() {
-		assertEquals(1,1);
-	}
-	
-	//uncomment these tests once service is up and running else tests will fail with I/O error on
 	
 	@Test
 	public void whenRoundOneIsOK() {
